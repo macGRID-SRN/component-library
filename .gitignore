@@ -34,3 +34,7 @@ eagle.epf
 *.info
 
 *.eps
+
+
+#MACOSX temp files
+*.DS_Store
