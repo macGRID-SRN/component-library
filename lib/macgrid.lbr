@@ -48,7 +48,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -57,10 +57,45 @@
 </layers>
 <library>
 <packages>
+<package name="PLCC-2">
+<description>The Vishay PLCC-2 Form Factor for SMD LEDs</description>
+<smd name="PPOS" x="1.55" y="0" dx="1.9" dy="2.9" layer="1"/>
+<smd name="PGND" x="-1.55" y="0" dx="1.9" dy="2.9" layer="1"/>
+<wire x1="-4.6" y1="-2" x2="-4.6" y2="1" width="0.127" layer="21"/>
+<wire x1="-4.6" y1="1" x2="-3.6" y2="2" width="0.127" layer="21"/>
+<wire x1="-3.6" y1="2" x2="4.6" y2="2" width="0.127" layer="21"/>
+<wire x1="4.6" y1="2" x2="4.6" y2="-2" width="0.127" layer="21"/>
+<wire x1="4.6" y1="-2" x2="-4.6" y2="-2" width="0.127" layer="21"/>
+<text x="-2.15" y="2.5" size="1.27" layer="25">name</text>
+</package>
 </packages>
 <symbols>
+<symbol name="SMD-LED-PLCC-2">
+<wire x1="-7.62" y1="-2.54" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="PGND" x="0" y="12.7" visible="pin" length="middle" rot="R270"/>
+<pin name="PPOS" x="0" y="-7.62" visible="pin" length="middle" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="SMD-LED-PLCC-2">
+<gates>
+<gate name="G$1" symbol="SMD-LED-PLCC-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PLCC-2">
+<connects>
+<connect gate="G$1" pin="PGND" pad="PGND"/>
+<connect gate="G$1" pin="PPOS" pad="PPOS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
