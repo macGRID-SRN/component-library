@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -68,6 +82,45 @@
 <wire x1="4.6" y1="-2" x2="-4.6" y2="-2" width="0.127" layer="21"/>
 <text x="-2.15" y="2.5" size="1.27" layer="25">name</text>
 </package>
+<package name="SMD-CAP-8MM">
+<smd name="P+" x="0" y="3.25" dx="2.5" dy="3.5" layer="1"/>
+<smd name="P-" x="0" y="-3.25" dx="2.5" dy="3.5" layer="1"/>
+<wire x1="-4.25" y1="5.5" x2="4.25" y2="5.5" width="0.127" layer="21"/>
+<wire x1="4.25" y1="5.5" x2="4.25" y2="-5.5" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-5.5" x2="-4.25" y2="-5.5" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="-5.5" x2="-4.25" y2="5.5" width="0.127" layer="21"/>
+<text x="-2.25" y="-0.75" size="1.27" layer="25">UWX</text>
+<text x="3" y="4.25" size="1.27" layer="21">+</text>
+<text x="3.25" y="-5" size="1.27" layer="21">-</text>
+</package>
+<package name="SMD-CAP-10MM">
+<smd name="P+" x="0" y="4.35" dx="2" dy="4.1" layer="1"/>
+<smd name="P-" x="0" y="-4.35" dx="2" dy="4.1" layer="1"/>
+<wire x1="6.5" y1="6.5" x2="6.5" y2="-6.5" width="0.127" layer="21"/>
+<wire x1="6.5" y1="-6.5" x2="-6.5" y2="-6.5" width="0.127" layer="21"/>
+<wire x1="-6.5" y1="-6.5" x2="-6.5" y2="6.5" width="0.127" layer="21"/>
+<wire x1="-6.5" y1="6.5" x2="6.5" y2="6.5" width="0.127" layer="21"/>
+<text x="1.8" y="-0.9" size="1.27" layer="25">E FT</text>
+<text x="4.9" y="5" size="1.27" layer="25">+</text>
+<text x="5.2" y="-5.7" size="1.27" layer="25">-</text>
+</package>
+<package name="INDUCTOR-M8365">
+<pad name="P$1" x="10.033" y="0" drill="1.4" diameter="3.81" shape="offset"/>
+<pad name="P$2" x="-10.033" y="0" drill="1.4" diameter="3.81" shape="offset" rot="R180"/>
+<circle x="0" y="0" radius="11.43" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="2.83980625" width="0.127" layer="21"/>
+<text x="3.81" y="3.81" size="1.27" layer="25">IND</text>
+<text x="1.27" y="-6.35" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="DO-214AB">
+<smd name="IN" x="-3.302" y="0" dx="5.334" dy="2.032" layer="1" rot="R90"/>
+<smd name="OUT" x="3.302" y="0" dx="5.334" dy="2.032" layer="1" rot="R90"/>
+<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="3.81" x2="5.08" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-3.81" x2="-5.08" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-3.81" x2="-5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.6096" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SMD-LED-PLCC-2">
@@ -77,6 +130,31 @@
 <wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
 <pin name="PGND" x="0" y="12.7" visible="pin" length="middle" rot="R270"/>
 <pin name="PPOS" x="0" y="-7.62" visible="pin" length="middle" rot="R90"/>
+</symbol>
+<symbol name="SMD-CAPACITOR">
+<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94" curve="-67.380135"/>
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<pin name="P+" x="0" y="5.08" length="middle" rot="R270"/>
+<pin name="P-" x="0" y="-7.62" length="middle" rot="R90"/>
+<text x="2.54" y="-7.62" size="1.27" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="INDUCTOR-9A">
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="-15.24" y1="0" x2="-5.08" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="5.08" y1="0" x2="15.24" y2="0" width="0.254" layer="94" curve="-180"/>
+<text x="7.62" y="0" size="1.778" layer="95">IND</text>
+<pin name="P$1" x="-20.32" y="0" length="middle"/>
+<pin name="P$2" x="20.32" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="GENERICDIODE">
+<wire x1="-5.08" y1="0" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="OUT" x="0" y="10.16" length="middle" rot="R270"/>
+<pin name="IN" x="0" y="-2.54" length="middle" rot="R90"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="10.16" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -89,6 +167,70 @@
 <connects>
 <connect gate="G$1" pin="PGND" pad="PGND"/>
 <connect gate="G$1" pin="PPOS" pad="PPOS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-CAP-NICHICON-8MM">
+<gates>
+<gate name="G$1" symbol="SMD-CAPACITOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMD-CAP-8MM">
+<connects>
+<connect gate="G$1" pin="P+" pad="P+"/>
+<connect gate="G$1" pin="P-" pad="P-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-CAP-PANASONIC-E-FT-10MM">
+<gates>
+<gate name="G$1" symbol="SMD-CAPACITOR" x="-7.62" y="15.24"/>
+</gates>
+<devices>
+<device name="" package="SMD-CAP-10MM">
+<connects>
+<connect gate="G$1" pin="P+" pad="P+"/>
+<connect gate="G$1" pin="P-" pad="P-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="INDUCTOR-M8365">
+<gates>
+<gate name="G$1" symbol="INDUCTOR-9A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="INDUCTOR-M8365">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DO-214AB">
+<gates>
+<gate name="G$1" symbol="GENERICDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DO-214AB">
+<connects>
+<connect gate="G$1" pin="IN" pad="IN"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
 </connects>
 <technologies>
 <technology name=""/>
